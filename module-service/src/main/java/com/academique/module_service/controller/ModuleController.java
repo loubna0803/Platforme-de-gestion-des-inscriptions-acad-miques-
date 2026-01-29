@@ -1,13 +1,15 @@
-package com.academic.module_service.controller;
+package com.academique.module_service.controller;
 
-import com.academic.module_service.model.Module;
-import com.academic.module_service.service.ModuleService;
+import com.academique.module_service.model.Module;
+import com.academique.module_service.service.ModuleService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/modules")
+// @RequiredArgsConstructor
+
 public class ModuleController {
 
     private final ModuleService service;

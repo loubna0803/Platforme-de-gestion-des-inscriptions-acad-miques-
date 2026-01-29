@@ -1,4 +1,4 @@
-package com.academic.module_service.model;
+package com.academique.module_service.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

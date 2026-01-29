@@ -1,12 +1,14 @@
-package com.academic.module_service.service;
+package com.academique.module_service.service;
 
-import com.academic.module_service.model.Module;
-import com.academic.module_service.repository.ModuleRepository;
+import com.academique.module_service.model.Module;
+import com.academique.module_service.repository.ModuleRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+// @RequiredArgsConstructor
+
 public class ModuleService {
 
     private final ModuleRepository repository;
