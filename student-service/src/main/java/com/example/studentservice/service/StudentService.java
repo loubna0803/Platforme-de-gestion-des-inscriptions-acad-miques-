@@ -4,7 +4,11 @@ import java.util.List;
 import com.example.studentservice.entity.Student;
 
 public interface StudentService {
-    Student save(Student student);
     List<Student> findAll();
-    Student findById(Long id);
+Student findById(Long id);
+Student save(Student student);
+Student update(Long id, Student student);
+void delete(Long id);
+List<Student> findByNameContaining(String name);
+
 }

@@ -17,18 +17,39 @@ public class StudentController {
         this.service = service;
     }
 
+    // Créer un étudiant
     @PostMapping
     public Student create(@RequestBody Student student) {
         return service.save(student);
     }
 
+    // Lister tous les étudiants
     @GetMapping
     public List<Student> getAll() {
         return service.findAll();
     }
 
+    // Chercher un étudiant par ID
     @GetMapping("/{id}")
     public Student getById(@PathVariable Long id) {
         return service.findById(id);
+    }
+
+    // Mettre à jour un étudiant
+    @PutMapping("/{id}")
+    public Student update(@PathVariable Long id, @RequestBody Student student) {
+        return service.update(id, student);
+    }
+
+    // Supprimer un étudiant
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        service.delete(id);
+    }
+
+    // Rechercher des étudiants par nom (optionnel)
+    @GetMapping("/search")
+    public List<Student> searchByName(@RequestParam String name) {
+        return service.findByNameContaining(name);
     }
 }
