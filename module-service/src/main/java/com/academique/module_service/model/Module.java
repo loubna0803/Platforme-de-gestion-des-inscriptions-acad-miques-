@@ -14,12 +14,12 @@ public class Module {
 
     private String code;
     private String title;
-    private Boolean hours;
+    private Float hours;
     private int maxStudents;
 
     public Module() {}
 
-    public Module(String code, String title, Boolean hours, int maxStudents) {
+    public Module(String code, String title, Float hours, int maxStudents) {
         this.code = code;
         this.title = title;
         this.hours = hours;
@@ -33,8 +33,8 @@ public class Module {
     public void setCode(String code) { this.code = code; }
     public String getTitle() { return title; }
     public void setTitle(String title) { this.title = title; }
-    public Boolean getHours() { return hours; }
-    public void setHours(Boolean hours) { this.hours = hours; }
+    public Float getHours() { return hours; }
+    public void setHours(Float hours) { this.hours = hours; }
     public int getMaxStudents() { return maxStudents; }
     public void setMaxStudents(int maxStudents) { this.maxStudents = maxStudents; }
 }
