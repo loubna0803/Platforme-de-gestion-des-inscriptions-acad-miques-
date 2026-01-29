@@ -12,3 +12,10 @@ spring:
         git:
           uri: https://github.com/loubna0803/Platforme-de-gestion-des-inscriptions-acad-miques-
 
+
+spring:
+  application:
+    name: formation-service
+  config:
+    import: optional:configserver:http://localhost:8888
+
