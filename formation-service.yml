@@ -5,22 +5,37 @@ spring:
   application:
     name: formation-service
 
+  # datasource:
+  #   url: jdbc:mysql://localhost:3306/formationdb
+  #   username: root
+  #   password: 123
+  # jpa:
+  #   hibernate:
+  #     ddl-auto: update
+  #   show-sql: true
+  #   properties:
+  #     hibernate:
+  #       dialect: org.hibernate.dialect.MySQL8Dialect
   datasource:
-    url: jdbc:mysql://localhost:3306/formationdb
-    username: root
-    password: 123
+    url: jdbc:h2:mem:moduledb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+    platform: h2
+  h2:
+    console:
+      enabled: true
 
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL8Dialect
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true   #le service s’enregistre automatiquement
+    fetch-registry: true   #le service peut voir les autres services sur Eureka
 
-  cloud:
-    config:
-      enabled: false
+  # cloud:
+  #   config:
+  #     enabled: false
 
 # spring:
 #   datasource:
