@@ -32,6 +32,7 @@ public class InscriptionService {
             throw new RuntimeException("MODULE_SERVICE_UNAVAILABLE");
         }
 
+       
         Inscription inscription = new Inscription(studentId, moduleId, formationId);
         inscription.setStatus(StatusInscription.VALIDEE);
 
