@@ -9,9 +9,20 @@ public class Formation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nom;
+    private Integer capacite;
     private String description;
-    private int capacite;
+    private String nom;
 
-    // getters et setters
+    // ✅ Assure-toi que tu as les getters
+    public Long getId() { return id; }
+    public Integer getCapacite() { return capacite; }
+    public String getDescription() { return description; }
+    public String getNom() { return nom; }
+
+    // Optional : setters si tu veux POST/PUT
+    public void setId(Long id) { this.id = id; }
+    public void setCapacite(Integer capacite) { this.capacite = capacite; }
+    public void setDescription(String description) { this.description = description; }
+    public void setNom(String nom) { this.nom = nom; }
 }
+
