@@ -47,7 +47,7 @@ public Student update(Long id, Student student) {
     }
 
     @Override
-public List<Student> findByNameContaining(String nom) {
+public List<Student> findByNomContaining(String nom) {
     return repository.findByNomContainingIgnoreCase(nom);
 }
 
