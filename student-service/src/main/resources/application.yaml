@@ -2,7 +2,7 @@ spring:
   application:
     name: student-service
   config:
-    import: "configserver:http://localhost:8888"
+    import: configserver:http://localhost:8888
   cloud:
     config:
       uri: http://localhost:8888
