@@ -30,14 +30,16 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public Student update(Long id, Student student) {
-        Student existing = repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Student not found"));
-        existing.setNom(student.getNom());
-        existing.setEmail(student.getEmail());
-        // ajoute d'autres champs si nécessaire
-        return repository.save(existing);
-    }
+public Student update(Long id, Student student) {
+    Student existing = repository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Student not found"));
+    existing.setNom(student.getNom());
+    existing.setPrenom(student.getPrenom());
+    existing.setEmail(student.getEmail());
+    existing.setNiveau(student.getNiveau());
+    return repository.save(existing);
+}
+
 
     @Override
     public void delete(Long id) {
@@ -45,7 +47,8 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public List<Student> findByNameContaining(String name) {
-        return repository.findByNameContainingIgnoreCase(name);
-    }
+public List<Student> findByNomContaining(String nom) {
+    return repository.findByNomContainingIgnoreCase(nom);
+}
+
 }

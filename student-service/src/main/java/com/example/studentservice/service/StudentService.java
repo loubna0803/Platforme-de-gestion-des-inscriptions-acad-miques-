@@ -9,6 +9,6 @@ Student findById(Long id);
 Student save(Student student);
 Student update(Long id, Student student);
 void delete(Long id);
-List<Student> findByNameContaining(String name);
+List<Student> findByNomContaining(String nom);
 
 }
