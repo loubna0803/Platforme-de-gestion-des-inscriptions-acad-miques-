@@ -4,14 +4,18 @@ server:
 spring:
   application:
     name: inscription-service
-  datasource:
-    url: jdbc:mysql://localhost:3306/inscription_db
-    username: root
-    password:
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
+  config:
+    import: optional:configserver:http://localhost:8888
+
+datasource:
+  url: jdbc:mysql://localhost:3306/inscription_db
+  username: root
+  password: root123
+
+jpa:
+  hibernate:
+    ddl-auto: update
+  show-sql: true
 
 eureka:
   client:
