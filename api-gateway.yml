@@ -2,28 +2,30 @@ server:
   port: 8087
 
 spring:
-  cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-      routes:
-        - id: student-service
-          uri: lb://STUDENT-SERVICE
-          predicates:
-            - Path=/students/**
-        - id: formation-service
-          uri: lb://FORMATION-SERVICE
-          predicates:
-            - Path=/formations/**
-        - id: module-service
-          uri: lb://MODULE-SERVICE
-          predicates:
-            - Path=/modules/**
-        - id: inscription-service
-          uri: lb://INSCRIPTION-SERVICE
-          predicates:
-            - Path=/inscriptions/**
+ cloud:
+   gateway:
+     server:
+       webflux:
+         routes:
+          - id: student-service
+            uri: lb://STUDENT-SERVICE
+            predicates:
+              - Path=/students/**
+          - id: formation-service
+            uri: lb://FORMATION-SERVICE
+            predicates:
+              - Path=/formations/**
+          - id: module-service
+            uri: lb://MODULE-SERVICE
+            predicates:
+              - Path=/modules/**
+          - id: inscription-service
+            uri: lb://INSCRIPTION-SERVICE
+            predicates:
+              - Path=/inscriptions/**
+         discovery:
+          locator:
+           enabled: true
 
 
 eureka:
