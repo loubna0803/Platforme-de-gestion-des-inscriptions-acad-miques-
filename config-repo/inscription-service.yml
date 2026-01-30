@@ -4,3 +4,9 @@ spring:
   cloud:
     config:
       uri: http://localhost:8888
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true   #le service s’enregistre automatiquement
+    fetch-registry: true   #le service peut voir les autres services sur Eureka
