@@ -49,7 +49,7 @@ public class StudentController {
 
     // Rechercher des étudiants par nom (optionnel)
     @GetMapping("/search")
-    public List<Student> searchByName(@RequestParam String name) {
-        return service.findByNameContaining(name);
+    public List<Student> searchByName(@RequestParam String nom) {
+        return service.findByNameContaining(nom);
     }
 }
