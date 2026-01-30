@@ -2,12 +2,13 @@ server:
   port: 8888
 
 spring:
-  datasource:
-    url: jdbc:h2:mem:testdb
+#   datasource:
+#     url: jdbc:h2:mem:testdb
 
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/loubna0803/Platforme-de-gestion-des-inscriptions-acad-miques-
+          uri: https://github.com/loubna0803/Platforme-de-gestion-des-inscriptions-acad-miques-/config-repo
+
 
